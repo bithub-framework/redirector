@@ -10,7 +10,7 @@ class Redirector extends Startable {
         this.map = new Map();
         this.router = new Router();
         this.koa.use(bodyParser());
-        this.router.put('/:path*', async (ctx, next) => {
+        this.router.put('/(.*)', async (ctx, next) => {
             try {
                 const url = new URL(ctx.request.body);
                 this.map.set(ctx.path, url.href);
@@ -20,11 +20,17 @@ class Redirector extends Startable {
             }
             await next();
         });
-        this.router.get('/:path*', async (ctx, next) => {
-            if (this.map.has(ctx.path))
-                ctx.redirect(this.map.get(ctx.path));
-            else
+        this.router.get('/(.*)', async (ctx, next) => {
+            try {
+                const url = new URL(this.map.get(ctx.path));
+                for (const name in ctx.query)
+                    url.searchParams.append(name, ctx.query[name]);
+                ctx.redirect(url.href);
+                ctx.status = 307;
+            }
+            catch (e) {
                 ctx.status = 404;
+            }
             await next();
         });
         this.koa.use(this.router.routes());
