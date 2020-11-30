@@ -6,7 +6,7 @@
     "types": "./dist/index.d.ts",
     "type": "module",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "tsc -b ./test/ && ava",
         "build": "tsc -b"
     },
     "author": "Zim",
@@ -20,5 +20,10 @@
         "koa": "^2.13.0",
         "koa-bodyparser": "^4.3.0",
         "startable": "https://gitee.com/zimtsui/startable.git"
+    },
+    "devDependencies": {
+        "@types/node-fetch": "^2.5.7",
+        "ava": "^3.13.0",
+        "node-fetch": "^2.6.1"
     }
 }

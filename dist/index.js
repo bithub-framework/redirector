@@ -3,26 +3,31 @@ import Startable from 'startable';
 import Router from '@koa/router';
 import bodyParser from 'koa-bodyparser';
 import { URL } from 'url';
+// path 的第一个 “/” 有没有视为等效，第二个 “/” 起视为不等效
 class Redirector extends Startable {
     constructor() {
         super();
         this.koa = new Koa();
         this.map = new Map();
         this.router = new Router();
-        this.koa.use(bodyParser());
+        this.koa.use(bodyParser({
+            enableTypes: ['text'],
+        }));
         this.router.put('/(.*)', async (ctx, next) => {
             try {
                 const url = new URL(ctx.request.body);
-                this.map.set(ctx.path, url.href);
+                this.map.set(ctx.path, url);
             }
             catch (e) {
                 ctx.status = 400;
+                console.log(e);
             }
             await next();
         });
         this.router.get('/(.*)', async (ctx, next) => {
             try {
-                const url = new URL(this.map.get(ctx.path));
+                const url = this.map.get(ctx.path);
+                console.assert(url);
                 for (const name in ctx.query)
                     url.searchParams.append(name, ctx.query[name]);
                 ctx.redirect(url.href);
@@ -30,6 +35,7 @@ class Redirector extends Startable {
             }
             catch (e) {
                 ctx.status = 404;
+                console.log(e);
             }
             await next();
         });
