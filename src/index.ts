@@ -24,7 +24,6 @@ class Redirector extends Startable {
                 this.map.set(ctx.path, url);
             } catch (e) {
                 ctx.status = 400;
-                console.log(e);
             }
             await next();
         });
@@ -39,7 +38,6 @@ class Redirector extends Startable {
                 ctx.status = 307;
             } catch (e) {
                 ctx.status = 404;
-                console.log(e);
             }
             await next();
         });

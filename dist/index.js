@@ -20,7 +20,6 @@ class Redirector extends Startable {
             }
             catch (e) {
                 ctx.status = 400;
-                console.log(e);
             }
             await next();
         });
@@ -35,7 +34,6 @@ class Redirector extends Startable {
             }
             catch (e) {
                 ctx.status = 404;
-                console.log(e);
             }
             await next();
         });
