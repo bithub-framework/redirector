@@ -526,6 +526,16 @@
         "signature": "05ec4662747c3bb879f42a2ac04275f46ca6dc0732f2872b612840bded928440",
         "affectsGlobalScope": false
       },
+      "./node_modules/startable/dist/adaptor.d.ts": {
+        "version": "43ae6ebe851afcc4429f8d897402ce6ddc4e508f70987797f9b31b4fb12d5336",
+        "signature": "43ae6ebe851afcc4429f8d897402ce6ddc4e508f70987797f9b31b4fb12d5336",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/startable/dist/index.d.ts": {
+        "version": "a8a17c833a6e857778c83fb00d47df12270bd703ce3974baace8dd4be5e0fc47",
+        "signature": "a8a17c833a6e857778c83fb00d47df12270bd703ce3974baace8dd4be5e0fc47",
+        "affectsGlobalScope": false
+      },
       "./node_modules/@types/koa__router/index.d.ts": {
         "version": "85fd3726c02399a17cdb309d8c9cf8eee9d6bc5c8bcc075f3bfac26ec1207ac7",
         "signature": "85fd3726c02399a17cdb309d8c9cf8eee9d6bc5c8bcc075f3bfac26ec1207ac7",
@@ -536,9 +546,14 @@
         "signature": "b8d67a816b437cd16692069fa2d9c2255216673fdf9d1bdd6a9d2f23a803796f",
         "affectsGlobalScope": false
       },
-      "./src/index.ts": {
-        "version": "ae052c2a5c7062d08858fd2f61395c92d47270e536fe598a5bbd2416d2f1c62d",
+      "./src/redirector.ts": {
+        "version": "7d06c8ad21f168758f6bbb0c97471bada51b4fcefac6a0a9e38b20d4d7413e57",
         "signature": "9de8c28e8d9002b75ede8ba5f8fb47561f39b0776a874fecdd21068dd7ebd291",
+        "affectsGlobalScope": false
+      },
+      "./src/script.ts": {
+        "version": "868ce5786ec8554dee7070020dfadd13d3823766ba2959cb6c2f4af09c31d946",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
       "./node_modules/form-data/index.d.ts": {
@@ -821,11 +836,18 @@
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/node/stream.d.ts"
       ],
+      "./node_modules/startable/dist/adaptor.d.ts": [
+        "./node_modules/startable/dist/startable.d.ts"
+      ],
+      "./node_modules/startable/dist/index.d.ts": [
+        "./node_modules/startable/dist/adaptor.d.ts",
+        "./node_modules/startable/dist/startable.d.ts"
+      ],
       "./node_modules/startable/dist/startable.d.ts": [
         "./node_modules/@types/node/events.d.ts",
         "./node_modules/@types/node/index.d.ts"
       ],
-      "./src/index.ts": [
+      "./src/redirector.ts": [
         "./node_modules/@types/koa-bodyparser/index.d.ts",
         "./node_modules/@types/koa/index.d.ts",
         "./node_modules/@types/koa__router/index.d.ts",
@@ -833,7 +855,11 @@
         "./node_modules/@types/node/http.d.ts",
         "./node_modules/@types/node/path.d.ts",
         "./node_modules/@types/node/url.d.ts",
-        "./node_modules/startable/dist/startable.d.ts"
+        "./node_modules/startable/dist/index.d.ts"
+      ],
+      "./src/script.ts": [
+        "./node_modules/startable/dist/index.d.ts",
+        "./src/redirector.ts"
       ]
     },
     "exportedModulesMap": {
@@ -1078,11 +1104,18 @@
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/node/stream.d.ts"
       ],
+      "./node_modules/startable/dist/adaptor.d.ts": [
+        "./node_modules/startable/dist/startable.d.ts"
+      ],
+      "./node_modules/startable/dist/index.d.ts": [
+        "./node_modules/startable/dist/adaptor.d.ts",
+        "./node_modules/startable/dist/startable.d.ts"
+      ],
       "./node_modules/startable/dist/startable.d.ts": [
         "./node_modules/@types/node/events.d.ts",
         "./node_modules/@types/node/index.d.ts"
       ],
-      "./src/index.ts": [
+      "./src/redirector.ts": [
         "./node_modules/startable/dist/index.d.ts"
       ]
     },
@@ -1157,8 +1190,11 @@
       "./node_modules/@types/range-parser/index.d.ts",
       "./node_modules/@types/serve-static/index.d.ts",
       "./node_modules/form-data/index.d.ts",
+      "./node_modules/startable/dist/adaptor.d.ts",
+      "./node_modules/startable/dist/index.d.ts",
       "./node_modules/startable/dist/startable.d.ts",
-      "./src/index.ts",
+      "./src/redirector.ts",
+      "./src/script.ts",
       "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.collection.d.ts",
       "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.core.d.ts",
       "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.d.ts",

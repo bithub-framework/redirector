@@ -5,7 +5,7 @@ import bodyParser from 'koa-bodyparser';
 import { URL } from 'url';
 import { join } from 'path';
 import { once } from 'events';
-// path 的第一个 “/” 有没有视为等效，第二个 “/” 起视为不等效
+// URI 的 trailing slash 语义不明确，最好统一不带 trailing slash
 const PORT = 12000;
 class Redirector extends Startable {
     constructor() {
@@ -54,4 +54,4 @@ class Redirector extends Startable {
     }
 }
 export { Redirector as default, Redirector, };
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=redirector.js.map

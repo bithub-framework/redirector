@@ -2,8 +2,8 @@
     "name": "redirector",
     "version": "0.0.1",
     "description": "",
-    "main": "./dist/index.js",
-    "types": "./dist/index.d.ts",
+    "main": "./dist/redirector.js",
+    "types": "./dist/redirector.d.ts",
     "type": "module",
     "scripts": {
         "test": "tsc -b ./test && ava",

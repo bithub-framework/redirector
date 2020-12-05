@@ -1,5 +1,5 @@
 import test from 'ava';
-import Redirector from '../../dist/index';
+import Redirector from '../../dist/redirector';
 import fetch from 'node-fetch';
 import Koa from 'koa';
 test.serial('1', async (t) => {
