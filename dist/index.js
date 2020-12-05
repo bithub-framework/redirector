@@ -50,6 +50,7 @@ class Redirector extends Startable {
     }
     async _stop() {
         this.server.close();
+        await once(this.server, 'close');
     }
 }
 export { Redirector as default, Redirector, };

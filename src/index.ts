@@ -56,6 +56,7 @@ class Redirector extends Startable {
 
     protected async _stop() {
         this.server!.close();
+        await once(this.server!, 'close');
     }
 }
 

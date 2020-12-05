@@ -521,19 +521,9 @@
         "signature": "1ebc948ee6ded6760bff4e0f73d17b2c9c6412f8996162d25083f96493b938b1",
         "affectsGlobalScope": false
       },
-      "./node_modules/startable/dist/primitive.d.ts": {
-        "version": "05c34bdb2c83bf1d091b2738b1215ef99b68a1f4b32d2c18ee6f6e44a0c2a7eb",
-        "signature": "05c34bdb2c83bf1d091b2738b1215ef99b68a1f4b32d2c18ee6f6e44a0c2a7eb",
-        "affectsGlobalScope": false
-      },
       "./node_modules/startable/dist/startable.d.ts": {
-        "version": "885e1fe969ae29569ccbb52a56f850419f52412b774dc4f8ae5e85529f5f9bc1",
-        "signature": "885e1fe969ae29569ccbb52a56f850419f52412b774dc4f8ae5e85529f5f9bc1",
-        "affectsGlobalScope": false
-      },
-      "./node_modules/startable/dist/index.d.ts": {
-        "version": "5913c256635f2d03ecdbae2cbe9e70577750576ee4e46660affc4147f47291e2",
-        "signature": "5913c256635f2d03ecdbae2cbe9e70577750576ee4e46660affc4147f47291e2",
+        "version": "05ec4662747c3bb879f42a2ac04275f46ca6dc0732f2872b612840bded928440",
+        "signature": "05ec4662747c3bb879f42a2ac04275f46ca6dc0732f2872b612840bded928440",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/koa__router/index.d.ts": {
@@ -547,14 +537,9 @@
         "affectsGlobalScope": false
       },
       "./src/index.ts": {
-        "version": "505ba7e98e2406c459342f472a9ebe17575ae9bdc652701f4044b1a42383d1e7",
+        "version": "ae052c2a5c7062d08858fd2f61395c92d47270e536fe598a5bbd2416d2f1c62d",
         "signature": "9de8c28e8d9002b75ede8ba5f8fb47561f39b0776a874fecdd21068dd7ebd291",
         "affectsGlobalScope": false
-      },
-      "./node_modules/@types/chai/index.d.ts": {
-        "version": "2d65af67144ac8a3e835ba0bff8cd0c86ca7af3ade64ca13eab6ef42c3bd54de",
-        "signature": "2d65af67144ac8a3e835ba0bff8cd0c86ca7af3ade64ca13eab6ef42c3bd54de",
-        "affectsGlobalScope": true
       },
       "./node_modules/form-data/index.d.ts": {
         "version": "cbb7029e32a6a72178cda8baa9129b1ee6d1d779a35e46c780e38b4909d42a89",
@@ -836,14 +821,9 @@
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/node/stream.d.ts"
       ],
-      "./node_modules/startable/dist/index.d.ts": [
-        "./node_modules/startable/dist/startable.d.ts"
-      ],
-      "./node_modules/startable/dist/primitive.d.ts": [
-        "./node_modules/@types/node/events.d.ts"
-      ],
       "./node_modules/startable/dist/startable.d.ts": [
-        "./node_modules/startable/dist/primitive.d.ts"
+        "./node_modules/@types/node/events.d.ts",
+        "./node_modules/@types/node/index.d.ts"
       ],
       "./src/index.ts": [
         "./node_modules/@types/koa-bodyparser/index.d.ts",
@@ -853,7 +833,7 @@
         "./node_modules/@types/node/http.d.ts",
         "./node_modules/@types/node/path.d.ts",
         "./node_modules/@types/node/url.d.ts",
-        "./node_modules/startable/dist/index.d.ts"
+        "./node_modules/startable/dist/startable.d.ts"
       ]
     },
     "exportedModulesMap": {
@@ -1098,14 +1078,9 @@
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/node/stream.d.ts"
       ],
-      "./node_modules/startable/dist/index.d.ts": [
-        "./node_modules/startable/dist/startable.d.ts"
-      ],
-      "./node_modules/startable/dist/primitive.d.ts": [
-        "./node_modules/@types/node/events.d.ts"
-      ],
       "./node_modules/startable/dist/startable.d.ts": [
-        "./node_modules/startable/dist/primitive.d.ts"
+        "./node_modules/@types/node/events.d.ts",
+        "./node_modules/@types/node/index.d.ts"
       ],
       "./src/index.ts": [
         "./node_modules/startable/dist/index.d.ts"
@@ -1114,7 +1089,6 @@
     "semanticDiagnosticsPerFile": [
       "./node_modules/@types/accepts/index.d.ts",
       "./node_modules/@types/body-parser/index.d.ts",
-      "./node_modules/@types/chai/index.d.ts",
       "./node_modules/@types/connect/index.d.ts",
       "./node_modules/@types/content-disposition/index.d.ts",
       "./node_modules/@types/cookies/index.d.ts",
@@ -1183,8 +1157,6 @@
       "./node_modules/@types/range-parser/index.d.ts",
       "./node_modules/@types/serve-static/index.d.ts",
       "./node_modules/form-data/index.d.ts",
-      "./node_modules/startable/dist/index.d.ts",
-      "./node_modules/startable/dist/primitive.d.ts",
       "./node_modules/startable/dist/startable.d.ts",
       "./src/index.ts",
       "../../../../../usr/local/lib/node_modules/typescript/lib/lib.es2015.collection.d.ts",
