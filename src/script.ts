@@ -6,4 +6,4 @@ adaptor(redirector);
 
 redirector.start().then(() => {
     console.log('Started');
-});
+}, () => { });
