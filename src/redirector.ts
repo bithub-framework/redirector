@@ -31,11 +31,10 @@ class Redirector extends Startable {
             }
             await next();
         });
-        this.router.get('/:name/:path*', async (ctx, next) => {
+        this.router.all('/:name/:path+', async (ctx, next) => {
             try {
                 const url = new URL(this.map.get(ctx.params.name)!.href);
-                if (ctx.params.path)
-                    url.pathname = join(url.pathname, ctx.params.path);
+                url.pathname = join(url.pathname, ctx.params.path);
                 for (const name in ctx.query)
                     url.searchParams.append(name, ctx.query[name]);
                 url.hash = ctx.request.URL.hash;
