@@ -22,6 +22,6 @@ will redirect to
 
 `http://<service-hostname>:<service-port>/<path>`.
 
-Note that `path` mustn't be empty, the root url `http://<service-hostname>:<service-port>` will return 404.
+Note that `path` mustn't be empty, the base url `http://<redirector-hostname>:<redirector-port>/<service-name>` will return 404.
 
 Queries `?key=value` and hash `#hash` are supported.
